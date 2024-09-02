@@ -1,0 +1,40 @@
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    /* Adjust the number of columns */
+    grid-template-rows: repeat(8, 1fr);
+    /* Adjust the number of rows */
+    gap: 1px;
+    /* Adjust the spacing between grid items */
+    transform: rotateX(45deg) rotateZ(45deg);
+    /* Isometric transformation */
+    perspective: 800px;
+    /* Perspective effect */
+    width: 30%;
+    height: 30%;
+    margin: auto;
+    position: relative;
+}
+
+.gridItem {
+    width: 100%;
+    padding-bottom: 100%;
+    /* Ensures square grid items */
+    background-color: #fff9e9;
+    /* Color of the grid cells */
+    border: 1px solid #f1deb5;
+    /* Optional border */
+    box-shadow: 0 0 10px #fff9e9;
+    /* Optional shadow */
+    position: relative;
+    transform-style: preserve-3d;
+    /* Enables 3D transform effects */
+    cursor: pointer;
+}
+
+.gridItem:hover {
+    transform: translateZ(5px);
+    /* Hover effect to "lift" the cell */
+    transition: transform 0.3s ease;
+    background-color: #ffebd6;
+}
